@@ -1,4 +1,11 @@
 # Default ignored files
+<<<<<<< HEAD
+=======
+*.idea
+
+.idea
+.idea/
+>>>>>>> Authentication
 /shelf/
 /workspace.xml
 # Editor-based HTTP Client requests
