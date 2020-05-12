@@ -1,5 +1,6 @@
 import React from 'react';
 import './Signin.css';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import firebase, { auth,creatUserProfileDocument } from '../../firebase/firebase.utils';
 
@@ -9,10 +10,13 @@ class Signin extends React.Component {
 
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            authenticated: false
         };
         console.log(this.state)
     }
+
+
 
     handelSubmit = async event => {
         event.preventDefault();
@@ -23,6 +27,7 @@ class Signin extends React.Component {
                 email: '',
                 password: ''
             });
+            this.setState({authenticated: true})
             console.log('successfully login ')
         }).catch((error) => {
             console.error(error);
@@ -36,6 +41,14 @@ class Signin extends React.Component {
             [event.target.id]: event.target.value
         });
 
+    }
+
+
+
+    signInHandler =  () =>{
+        if (this.state.authenticated){
+            this.props.history.push('/covid')
+        }
     }
 
     render() {
@@ -69,9 +82,9 @@ class Signin extends React.Component {
                         <div className="">
 
                             <button className=" b ph3 pv2 input-reset ba b-black bg-transparent grow pointer f6 dib"
-                                    type="submit"> Login
+                                    type="submit"
+                            onClick={ this.signInHandler }> Login
                             </button>
-
                         </div>
                         <div className="lh-copy mt3">
 

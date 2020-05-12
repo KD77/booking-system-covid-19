@@ -1,10 +1,12 @@
 import React from 'react';
 import Logo from './Logo.png'
 import './Navbar.css';
+ import Signin from "../Signin/Signin";
 
-const Navbar = () => {
+const Navbar = (props) => {
+
+
     return (
-
         <div>
             <nav className="db dt-l w-100 border-box pa3 ph5-l">
                 {/*eslint-disable-next-line*/}
