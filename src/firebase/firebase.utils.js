@@ -4,14 +4,14 @@ import 'firebase/auth';
 
 
 const config = {
-  apiKey: "AIzaSyCo_2thcgZUK__LF0TRdW7o_IgubLjh53A",
-    authDomain: "booking-system-covid-19.firebaseapp.com",
-    databaseURL: "https://booking-system-covid-19.firebaseio.com",
-    projectId: "booking-system-covid-19",
-    storageBucket: "booking-system-covid-19.appspot.com",
-    messagingSenderId: "171640063831",
-    appId: "1:171640063831:web:005c7296495f7318686012",
-    measurementId: "G-0BYKG1GYN4"
+  apiKey: "AIzaSyDZnNyp2mV6y-xTauXZ5M-0shEaU_QttPc",
+  authDomain: "booking-system-covid-19-5ee02.firebaseapp.com",
+  databaseURL: "https://booking-system-covid-19-5ee02.firebaseio.com",
+  projectId: "booking-system-covid-19-5ee02",
+  storageBucket: "booking-system-covid-19-5ee02.appspot.com",
+  messagingSenderId: "664123378602",
+  appId: "1:664123378602:web:8261459b33ffee90f7f9d3",
+  measurementId: "G-QKKX307ZR4"
 };
 firebase.initializeApp(config);
 export const creatUserProfileDocument= async (userAuth, additionalData)=>{
@@ -37,10 +37,10 @@ export const creatUserProfileDocument= async (userAuth, additionalData)=>{
         ...additionalData
 
       });
-      
+
     } catch (error) {
       console.log('error creating user ',error.message);
-      
+
     }
 
 
@@ -49,4 +49,5 @@ export const creatUserProfileDocument= async (userAuth, additionalData)=>{
 };
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
+export const Fire=firebase;
 export default firebase;
