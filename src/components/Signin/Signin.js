@@ -47,7 +47,7 @@ class Signin extends React.Component {
 
     signInHandler =  () =>{
         if (this.state.authenticated){
-            this.props.history.push('/covid')
+            this.props.history.push('/user')
         }
     }
 

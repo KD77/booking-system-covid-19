@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Register from "./components/Register/Register";
 import Signin from "./components/Signin/Signin";
 import LandingPage from "./components/LandingPage/LandingPage";
+import UserLandingPage from "./components/UserLandingPage/UserLandingPage";
 
 import {auth,creatUserProfileDocument} from './firebase/firebase.utils';
 
@@ -44,20 +45,27 @@ class App extends React.Component {
         this.unsubscribeFromAuth();
     }
 
+    isLogedIn () {
+
+        return this.state.currentUser !== null
+    }
+
 
     render() {
+        console.log(this.isLogedIn())
 
         return (
             <Router>
                 <div>
 
-                    <Navbar/>
+                    <Navbar logedIn = {this.isLogedIn()}/>
 
                     {/*<Navbar currentUser={this.state.currentUser}/>*/}
 
                     <Switch>
                     <Route path='/' exact component={LandingPage}/>
                     <Route path='/signin' component = {Signin} />
+                    <Route path='/user' component = {UserLandingPage} />
                     <Route path='/register' component = {Register} />
                     <Route path = '/covid' component={CovidTest}/>
                     </Switch>
