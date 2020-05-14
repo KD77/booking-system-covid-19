@@ -1,45 +1,128 @@
 import React from 'react';
 //import './Register.css';
 
-const Register = () => {
+import {auth,creatUserProfileDocument } from '../../firebase/firebase.utils';
+
+
+
+class Register extends React.Component {
+
+  constructor(){
+    super();
+
+    this.state={
+      firstName:'',
+      lastName:'',
+      socialSecurityNumber:'',
+      email:'',
+      password:'',
+      address:'',
+      postNumber:''
+      
+
+    };
+  }
+  handleSubmit= async event=>{
+    event.preventDefault();
+   
+
+
+    const {firstName, lastName,socialSecurityNumber, email, password,address, postNumber} = this.state;
+
+    try {
+      const { user }= await auth.createUserWithEmailAndPassword(
+        email,
+        password
+      );
+
+      await creatUserProfileDocument(user,{firstName,lastName,socialSecurityNumber,email,password,address,postNumber});
+      this.setState({
+      firstName:'',
+      lastName:'',
+      socialSecurityNumber:'',
+      email:'',
+      password:'',
+      address:'',
+      postNumber:''
+     
+
+      });
+
+      
+    } catch (error) {
+      console.error(error)
+      
+    }
+    
+  };
+  handleChange=event=>{
+   // const { name, value}=event.target.value;
+    this.setState({
+      [event.target.id]: event.target.value
+    });
+  
+  }
+  render(){
+    const {firstName, lastName,socialSecurityNumber, email, password,address, postNumber} = this.state;
+
   return (
     <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
       <main className="pa4 black-80">
-        <form className="measure ">
+        <form onSubmit={this.handleSubmit} className="measure ">
+
           <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
             <legend className="f4 fw6 ph0 mh0">Sign Up</legend>
             <div className="mt3">
               <label className="db fw6 lh-copy f6" htmlFor ="name">Name</label>
-              <input className="pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="text" name="name"  id="name" />
+
+              <input className="pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="text" name="name"  id="firstName"
+              onChange={this.handleChange} 
+              />
               </div>
               <div className="mv3">
               <label className="db fw6 lh-copy f6" htmlFor ="last-name">Last name</label>
-              <input className="pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="text" name="last-name"  id="last-name" />
+              <input className="pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="text" name="last-name"  id="lastName" 
+              onChange={this.handleChange} 
+              />
               </div>
               <div className="mv3">
               <label className="db fw6 lh-copy f6" htmlFor ="social-security-number">Social Sercurity Number</label>
-              <input className="pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="text" name="name"  id="name" />
+              <input className="pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="text" name="name"  id="socialSecurityNumber" 
+              onChange={this.handleChange} 
+              />
               </div>
               <div className="mv3">
               <label className="db fw6 lh-copy f6" htmlFor ="email-address">Email</label>
-              <input className="pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="email" name="email-address"  id="email-address" />
+              <input className="pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="email" name="email-address"  id="email"
+              onChange={this.handleChange} 
+              />
             </div>
             <div className="mv3">
               <label className="db fw6 lh-copy f6" htmlFor ="password">Password</label>
-              <input className="b pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="password" name="password"  id="password" />
+              <input className="b pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="password" name="password"  id="password" 
+              onChange={this.handleChange} 
+              />
             </div>
             <div className="mv3">
               <label className="db fw6 lh-copy f6" htmlFor ="address">Address</label>
-              <input className="b pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="text" name="address"  id="number" />
+              <input className="b pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="text" name="address"  id="address"
+              onChange={this.handleChange} 
+              />
             </div>
             <div className="mv3">
               <label className="db fw6 lh-copy f6" htmlFor ="address">Post number</label>
-              <input className="b pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="text" name="postaddress"  id="number" />
+              <input className="b pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="text" name="postaddress"  id="postNumber"
+              onChange={this.handleChange} 
+              />
+
             </div>
             
           </fieldset>
           <div className="mv3">
-            <input className="b ph4 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Register" />
+
+         
+            <button className= "b ph4 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit">Sign Up</button>
+
           </div>
           <div className="lh-copy mt3">
             
@@ -49,6 +132,9 @@ const Register = () => {
       </main>
       </article>
   );
+
+  }
+
 }
 
 export default Register; 
