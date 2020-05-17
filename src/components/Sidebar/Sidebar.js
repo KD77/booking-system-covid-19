@@ -6,8 +6,10 @@ import { FaRegCalendarPlus } from "react-icons/all";
 import { FcAbout } from "react-icons/all";
 import { FaUserCircle } from "react-icons/fa";
 import { auth } from "../../firebase/firebase.utils";
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 class sidebar extends React.Component {
+
   render() {
     return (
       <Menu>
@@ -29,7 +31,7 @@ class sidebar extends React.Component {
           </div>
         </div>
 
-        <a className=" menu-item " href="/">
+        <a className=" menu-item " href="/LandingPage">
           <FiHome /> Home
         </a>
 
@@ -41,7 +43,7 @@ class sidebar extends React.Component {
           <FiSettings /> Account Settings
         </a>
 
-        <a className="menu-item " href="/" onClick={() => auth.signOut()}>
+        <a className="menu-item " href="/signin" onClick={() => auth.signOut()}>
           <FiLogOut /> Log out
         </a>
 
