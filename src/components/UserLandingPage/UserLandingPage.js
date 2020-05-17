@@ -2,11 +2,18 @@ import React ,{Component} from "react";
 import { auth, firestore } from "../../firebase/firebase.utils";
 
 // khale user page
+//hello
 class UserLandingPage extends Component {
-    state = {
+    constructor() {
+        super();
+ this.state = {
         user: {}
     };
-
+        
+        
+    };
+   
+   
     unsubscribe = null;
 
     componentDidMount() {

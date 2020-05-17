@@ -47,6 +47,7 @@ export const creatUserProfileDocument= async (userAuth, additionalData)=>{
   }
   return userRef;
 };
+
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 export const Fire=firebase;
