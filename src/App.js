@@ -1,5 +1,5 @@
 
-import React, {Component} from 'react';
+import React from 'react';
 
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
@@ -19,8 +19,9 @@ class App extends React.Component {
         super();
 
         this.state={
-            currentUser:null
+            currentUser:{}
         };
+        
     }
     unsubscribeFromAuth=null;
     componentDidMount(){
@@ -34,7 +35,7 @@ class App extends React.Component {
                             ...snapShot.data()
                         }
                     });
-                    console.log(this.state);
+                   // console.log(this.state.currentUser.firstName);
                 });
             }
             this.setState({ currentUser:userAuth});
@@ -49,21 +50,22 @@ class App extends React.Component {
 
         return this.state.currentUser !== null
     }
+  
 
 
     render() {
         console.log(this.isLogedIn())
+        
 
         return (
             <Router>
                 <div>
 
-                    <Navbar logedIn = {this.isLogedIn()}/>
-
+                    <Navbar logedIn = {this.isLogedIn()} currentUser={this.state.currentUser} />
                     {/*<Navbar currentUser={this.state.currentUser}/>*/}
 
                     <Switch>
-                    <Route path='/' exact component={LandingPage}/>
+                   <Route path='/' exact component={LandingPage} />
                     <Route path='/signin' component = {Signin} />
                     <Route path='/user' component = {UserLandingPage} />
                     <Route path='/register' component = {Register} />
