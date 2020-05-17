@@ -7,6 +7,9 @@ import Sidebar from "../Sidebar/Sidebar";
 const Navbar = (props) => {
 
     console.log('Nav bar', props.logedIn)
+   
+
+    
 
     const generalNav = <div>
         <nav className="db dt-l w-100 border-box pa3 ph5-l">
@@ -21,6 +24,7 @@ const Navbar = (props) => {
                 <a className="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="/signin" title="Sign In">Sign In</a>
                 {/*eslint-disable-next-line*/}
                 <a className="link dim dark-gray f6 f5-l dib" href="/register" title="Register">Register</a>
+                <h1>{}</h1>
             </div>
         </nav>
     </div>
@@ -40,7 +44,7 @@ const Navbar = (props) => {
                 </h1>
             </div>
         </header>
-        <Sidebar/>
+        <Sidebar dat={props.currentUser}/>
     </div>
 
     if (props.logedIn) {

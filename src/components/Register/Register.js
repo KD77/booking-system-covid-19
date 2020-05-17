@@ -75,43 +75,43 @@ class Register extends React.Component {
             <div className="mt3">
               <label className="db fw6 lh-copy f6" htmlFor ="name">Name</label>
 
-              <input className="pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="text" name="name"  id="firstName"
+              <input className="pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100 outline-0-m" type="text" name="name"  id="firstName"
               onChange={this.handleChange} 
               />
               </div>
               <div className="mv3">
               <label className="db fw6 lh-copy f6" htmlFor ="last-name">Last name</label>
-              <input className="pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="text" name="last-name"  id="lastName" 
+              <input className="pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100 outline-0-m" type="text" name="last-name"  id="lastName" 
               onChange={this.handleChange} 
               />
               </div>
               <div className="mv3">
               <label className="db fw6 lh-copy f6" htmlFor ="social-security-number">Social Sercurity Number</label>
-              <input className="pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="text" name="name"  id="socialSecurityNumber" 
+              <input className="pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100 outline-0-m" type="text" name="name"  id="socialSecurityNumber" 
               onChange={this.handleChange} 
               />
               </div>
               <div className="mv3">
               <label className="db fw6 lh-copy f6" htmlFor ="email-address">Email</label>
-              <input className="pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="email" name="email-address"  id="email"
+              <input className="pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100 outline-0-m" type="email" name="email-address"  id="email"
               onChange={this.handleChange} 
               />
             </div>
             <div className="mv3">
               <label className="db fw6 lh-copy f6" htmlFor ="password">Password</label>
-              <input className="b pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="password" name="password"  id="password" 
+              <input className="b pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100 outline-0-m" type="password" name="password"  id="password" 
               onChange={this.handleChange} 
               />
             </div>
             <div className="mv3">
               <label className="db fw6 lh-copy f6" htmlFor ="address">Address</label>
-              <input className="b pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="text" name="address"  id="address"
+              <input className="b pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100 outline-0-m" type="text" name="address"  id="address"
               onChange={this.handleChange} 
               />
             </div>
             <div className="mv3">
               <label className="db fw6 lh-copy f6" htmlFor ="address">Post number</label>
-              <input className="b pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100" type="text" name="postaddress"  id="postNumber"
+              <input className="b pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100 outline-0-m" type="text" name="postaddress"  id="postNumber"
               onChange={this.handleChange} 
               />
 
@@ -121,7 +121,7 @@ class Register extends React.Component {
           <div className="mv3">
 
          
-            <button className= "b ph4 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit">Sign Up</button>
+            <button className= "b ph4 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib outline-0-m" type="submit">Sign Up</button>
 
           </div>
           <div className="lh-copy mt3">
