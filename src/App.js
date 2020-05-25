@@ -60,12 +60,10 @@ class App extends React.Component {
         return (
             <Router>
                 <div>
-
                     <Navbar logedIn = {this.isLogedIn()} currentUser={this.state.currentUser} />
                     {/*<Navbar currentUser={this.state.currentUser}/>*/}
-
                     <Switch>
-                   <Route path='/' exact component={LandingPage} />
+                    <Route path='/' exact component={LandingPage} />
                     <Route path='/signin' component = {Signin} />
                     <Route path='/user' component = {UserLandingPage} />
                     <Route path='/register' component = {Register} />

@@ -34,7 +34,9 @@ class Signin extends React.Component {
 
         });
 
-
+        if (this.state.authenticated){
+            this.props.history.push('/user')
+        }
     }
     handelChange = event => {
         this.setState({
@@ -83,7 +85,7 @@ class Signin extends React.Component {
 
                             <button className=" b ph3 pv2 input-reset ba b-black bg-transparent grow pointer f6 dib outline-0-m"
                                     type="submit"
-                            onClick={ this.signInHandler }> Login
+                            > Login
                             </button>
                         </div>
                         <div className="lh-copy mt3">
