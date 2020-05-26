@@ -30,13 +30,15 @@ const Navbar = (props) => {
 
     const userNav =
         <div>
-
         <header className=" bg-light-gray">
             <div>
+                <div>
+                    <p className='fr mr3 bb bw1 h2 '> <strong style={{fontStyle: 'italic'}}>Logged in</strong>  </p>
+                </div>
                 <a href="/" title="Home" className=' ml6'>
                     <img src={Logo} className="w3 h3 br--top-m" alt="Logo"/>
                 </a>
-                <p className='fr mr3 bb bw1 h2 '> <strong style={{fontStyle: 'italic'}}>Logged in as: </strong> {props.currentUser.firstName}</p>
+
             </div>
             <Sidebar dat={props.currentUser}/>
         </header>
