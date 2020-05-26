@@ -1,6 +1,4 @@
-
 import React from 'react';
-
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import CovidTest from "./components/CovidTest/CovidTest";
@@ -9,7 +7,7 @@ import Register from "./components/Register/Register";
 import Signin from "./components/Signin/Signin";
 import LandingPage from "./components/LandingPage/LandingPage";
 import UserLandingPage from "./components/UserLandingPage/UserLandingPage";
-
+import Footer from "./components/Footer/Footer";
 import {auth,creatUserProfileDocument} from './firebase/firebase.utils';
 
 
@@ -58,6 +56,7 @@ class App extends React.Component {
         
 
         return (
+            <div>
             <Router>
                 <div>
                     <Navbar logedIn = {this.isLogedIn()} currentUser={this.state.currentUser} />
@@ -71,6 +70,8 @@ class App extends React.Component {
                     </Switch>
                 </div>
              </Router>
+                <Footer/>
+            </div>
         );
     }
 
