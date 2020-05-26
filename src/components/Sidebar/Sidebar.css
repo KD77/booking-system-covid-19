@@ -19,7 +19,6 @@ body {
 /* Individual item */
 .bm-item {
     display: inline-block;
-
     /* Our sidebar item styling */
     text-decoration: none;
     margin-bottom: 10px;
@@ -36,11 +35,11 @@ body {
 
 /* Position and sizing of burger button */
 .bm-burger-button {
-    position: fixed;
+    position: absolute;
     width: 36px;
     height: 30px;
     left: 36px;
-    top: 36px;
+    top: 20px;
 }
 
 /* Color/shape of burger icon bars */
@@ -88,5 +87,4 @@ body {
     border-top: 1px solid #cccccc;
     margin: 1em 0;
     padding: 0;
-
 }
