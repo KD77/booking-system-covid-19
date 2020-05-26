@@ -31,14 +31,16 @@ const Navbar = (props) => {
 
     const userNav =
         <div>
+
         <header className="tc bg-light-gray">
             <div>
                 <a href="/" title="Home">
                     <img src={Logo} className="w3 h3 br--top-m" alt="Logo"/>
                 </a>
             </div>
+            <Sidebar dat={props.currentUser}/>
         </header>
-        <Sidebar dat={props.currentUser}/>
+
     </div>
 
     if (props.logedIn) {

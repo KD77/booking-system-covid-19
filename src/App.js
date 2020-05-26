@@ -8,6 +8,7 @@ import Signin from "./components/Signin/Signin";
 import LandingPage from "./components/LandingPage/LandingPage";
 import UserLandingPage from "./components/UserLandingPage/UserLandingPage";
 import Footer from "./components/Footer/Footer";
+import UserEditPage from "./components/UserEditPage/UserEditPage"
 import {auth,creatUserProfileDocument} from './firebase/firebase.utils';
 
 
@@ -80,6 +81,7 @@ class App extends React.Component {
                     <Route path='/' exact component={LandingPage} />
                     <Route path='/signin' component = {Signin} />
                     <Route path='/user' component = {UserLandingPage} />
+                    <Route path='/UserEditPage' component={UserEditPage}/>
                     <Route path='/register' component = {Register} />
                     <Route path = '/covid' component={CovidTest}/>
                     <Route path='*' component={() => <h1 className='tc '>404 NOT FOUND</h1>} />
