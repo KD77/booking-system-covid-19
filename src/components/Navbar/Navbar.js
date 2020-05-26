@@ -2,7 +2,6 @@ import React from 'react';
 import Logo from './Logo.png'
 import './Navbar.css';
 import Sidebar from "../Sidebar/Sidebar";
- import Signin from "../Signin/Signin";
 
 const Navbar = (props) => {
 
@@ -34,14 +33,9 @@ const Navbar = (props) => {
         <div>
         <header className="tc bg-light-gray">
             <div>
-
-                <h1 className="mt2 mb0 i fw1 f1">
-                    <div>
-                        <a href="/" title="Home">
-                            <img src={Logo} className="w3 h3 br--top-m" alt="Logo"/>
-                        </a>
-                    </div>
-                </h1>
+                <a href="/" title="Home">
+                    <img src={Logo} className="w3 h3 br--top-m" alt="Logo"/>
+                </a>
             </div>
         </header>
         <Sidebar dat={props.currentUser}/>
