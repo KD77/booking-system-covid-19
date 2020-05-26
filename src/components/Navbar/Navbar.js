@@ -2,7 +2,6 @@ import React from 'react';
 import Logo from './Logo.png'
 import './Navbar.css';
 import Sidebar from "../Sidebar/Sidebar";
-
 const Navbar = (props) => {
 
     console.log('Nav bar', props.logedIn)
@@ -32,11 +31,12 @@ const Navbar = (props) => {
     const userNav =
         <div>
 
-        <header className="tc bg-light-gray">
+        <header className=" bg-light-gray">
             <div>
-                <a href="/" title="Home">
+                <a href="/" title="Home" className=' ml6'>
                     <img src={Logo} className="w3 h3 br--top-m" alt="Logo"/>
                 </a>
+                <p className='fr mr3 bb bw1 h2 '> <strong style={{fontStyle: 'italic'}}>Logged in as: </strong> {props.currentUser.firstName}</p>
             </div>
             <Sidebar dat={props.currentUser}/>
         </header>
