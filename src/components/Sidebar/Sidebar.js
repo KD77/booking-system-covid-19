@@ -4,9 +4,8 @@ import "./Sidebar.css";
 import { FiHome, FiLogOut, FiSettings } from "react-icons/fi";
 import { FaRegCalendarPlus } from "react-icons/all";
 import { FcAbout } from "react-icons/all";
-import { FaUserCircle } from "react-icons/fa";
 import { auth } from "../../firebase/firebase.utils";
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
 
 class sidebar extends React.Component {
 
@@ -31,7 +30,7 @@ class sidebar extends React.Component {
           </div>
         </div>
 
-        <a className=" menu-item " href="/LandingPage">
+        <a className=" menu-item " href="/user">
           <FiHome /> Home
         </a>
 
