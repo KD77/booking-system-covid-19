@@ -12,10 +12,6 @@ class UserLandingPage extends Component {
         
         
     };
-   
-   
-    unsubscribe = null;
-
     componentDidMount() {
         const user = auth.onAuthStateChanged(user => {
             const db = firestore
@@ -60,10 +56,6 @@ class UserLandingPage extends Component {
                     <h1>{this.state.user.lastName}</h1>
                 </div>
                 <h2 class="f5 center fw4 gray mt0 tc ">{this.state.user.email}</h2>
-
-
-
-
 
                 <div class="items-center tc">
                     <button

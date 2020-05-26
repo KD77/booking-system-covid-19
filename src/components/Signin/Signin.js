@@ -11,7 +11,8 @@ class Signin extends React.Component {
         this.state = {
             email: '',
             password: '',
-            authenticated: false
+            authenticated: false,
+            messege : ''
         };
         console.log(this.state)
     }
@@ -35,7 +36,12 @@ class Signin extends React.Component {
         });
 
 
-    }
+            if (this.state.authenticated) {
+                this.props.history.push('/user')
+            } else
+                this.setState({messege: 'Incorrect username or password. Please try again!'})
+        }
+
     handelChange = event => {
         this.setState({
             [event.target.id]: event.target.value
@@ -47,7 +53,8 @@ class Signin extends React.Component {
 
     signInHandler =  () =>{
         if (this.state.authenticated){
-            this.props.history.push('/user')
+            // this.props.history.push('/user')
+
         }
     }
 
@@ -80,10 +87,11 @@ class Signin extends React.Component {
 
                         </fieldset>
                         <div className="">
+                            <h5 style={{color : "red"}}>{this.state.messege}</h5>
 
                             <button className=" b ph3 pv2 input-reset ba b-black bg-transparent grow pointer f6 dib outline-0-m"
                                     type="submit"
-                            onClick={ this.signInHandler }> Login
+                            > Login
                             </button>
                         </div>
                         <div className="lh-copy mt3">
