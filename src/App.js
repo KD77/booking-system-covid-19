@@ -81,7 +81,7 @@ class App extends React.Component {
                     <Route path='/' exact component={LandingPage} />
                     <Route path='/signin' component = {Signin} />
                     <Route path='/user' component = {UserLandingPage} />
-                    <Route path='/UserEditPage/' component={UserEditPage}/>
+                    <Route path='/UserEditPage' component={UserEditPage}/>
                     <Route path='/register' component = {Register} />
                     <Route path = '/covid' component={CovidTest}/>
                     <Route path='*' component={() => <h1 className='tc '>404 NOT FOUND</h1>} />
