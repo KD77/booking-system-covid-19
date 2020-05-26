@@ -6,9 +6,7 @@ import { FaRegCalendarPlus } from "react-icons/all";
 import { FcAbout } from "react-icons/all";
 import { auth } from "../../firebase/firebase.utils";
 
-
 class sidebar extends React.Component {
-
   render() {
     return (
       <Menu>
@@ -20,6 +18,7 @@ class sidebar extends React.Component {
             src={require("../../assets/images.png")}
             class="br-100 h4 w4 dib ba b--black-05 pa2 "
             title="Photo of a kitty staring at you"
+            alt=""
           />
           <div className="tc ">
             <span>{this.props.dat.firstName}</span>
@@ -34,11 +33,11 @@ class sidebar extends React.Component {
           <FiHome /> Home
         </a>
 
-        <a className="menu-item" href="/">
+        <a className="menu-item" href="/booking">
           <FaRegCalendarPlus /> Appointments
         </a>
 
-          <a className="menu-item " href="/UserEditPage/UserEditPage">
+        <a className="menu-item " href="/UserEditPage/UserEditPage">
           <FiSettings /> Account Settings
         </a>
 
