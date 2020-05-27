@@ -12,6 +12,7 @@ import UserEditPage from "./components/UserEditPage/UserEditPage"
 import {auth,creatUserProfileDocument} from './firebase/firebase.utils';
 import Booking from './components/Booking/Booking';
 import Slots from './components/Booking/Slots';
+import About from './components/About/About'
 
 
 
@@ -91,14 +92,15 @@ class App extends React.Component {
                     <Route path='/register' component = {Register} />
                     <Route path='/covid' component={CovidTest}/>
                     <Route path='/booking' component = {Booking} />
+                    <Route path='/about' component = {About} />
                     <Route path='/slots' component = {Slots} />
                     <Route path='*' component={() => <h1 className='tc '>404 NOT FOUND</h1>} />
                     </Switch>
                 </div>
              </Router>
-                <div className='footer'>
+
                     <Footer/>
-                </div>
+
             </div>
         );
     }
