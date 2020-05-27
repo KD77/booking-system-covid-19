@@ -11,27 +11,9 @@ import Footer from "./components/Footer/Footer";
 import UserEditPage from "./components/UserEditPage/UserEditPage"
 import {auth,creatUserProfileDocument} from './firebase/firebase.utils';
 import Booking from './components/Booking/Booking';
-import Slots from './components/Booking/Slots';
+// import Slots from './components/Booking/Slots';
 import About from './components/About/About'
-
-
-
-// const ProtectedRoute = ({component: Test, ...rest}) => {
-//     return (
-//         <Route
-//             {...rest}
-//             render={props => {
-//                 if (auth.currentUser !== null) {
-//                     return <Test {...props} />;
-//                 } else {
-//                     return (
-//                         <Redirect to="/signin"/>
-//                     );
-//                 }
-//             }}
-//         />
-//     );
-// };
+import UserList from "./components/UserList/UserList";
 
 
 
@@ -83,17 +65,17 @@ class App extends React.Component {
             <Router>
                 <div>
                     <Navbar logedIn = {this.isLogedIn()} currentUser={this.state.currentUser} signOut={this.signOut} />
-                    {/*<Navbar currentUser={this.state.currentUser}/>*/}
                     <Switch>
                     <Route path='/' exact component={LandingPage} />
                     <Route path='/signin' component = {Signin} />
-                    <Route path='/user' component = {UserLandingPage} />
-                    <Route path='/UserEditPage' component={UserEditPage}/>
+                    <Route exact path='/user' component = {UserLandingPage} />
+                    <Route path='/user/UserEditPage' component={UserEditPage}/>
                     <Route path='/register' component = {Register} />
                     <Route path='/covid' component={CovidTest}/>
-                    <Route path='/booking' component = {Booking} />
+                    <Route path='/user/booking' component = {Booking} />
                     <Route path='/about' component = {About} />
-                    <Route path='/slots' component = {Slots} />
+                    <Route path='/Admin/UserList' component={UserList}/>
+                    {/*<Route path='/user/slots' component = {Slots} />*/}
                     <Route path='*' component={() => <h1 className='tc '>404 NOT FOUND</h1>} />
                     </Switch>
                 </div>

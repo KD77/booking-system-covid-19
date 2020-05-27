@@ -32,11 +32,11 @@ class sidebar extends React.Component {
           <FiHome /> Home
         </a>
 
-        <a className="menu-item" href="/booking">
+        <a className="menu-item" href="/user/booking">
           <FaRegCalendarPlus /> Appointments
         </a>
 
-        <a className="menu-item " href="/UserEditPage/UserEditPage">
+        <a className="menu-item " href="/user/UserEditPage">
           <FiSettings /> Account Settings
         </a>
 
