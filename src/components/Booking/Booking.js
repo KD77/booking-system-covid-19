@@ -47,22 +47,22 @@ class Booking extends React.Component {
 
   render() {
     return (
-      <div class="mw7 ma3 bg-white br3 pa3 pa4-ns mv5 ba b--black-10 center">
-        <div class="flex justify-center">
-          <div class=" flex flex-column">
-            <div class=" w-100 pa3 mt2">
+      <div class="mw8 ma3 bg-white br3 pa3 pa4-ns mv4 h-100 ba b--black-10 center">
+        <div class="flex justify-center ">
+          <div class=" flex flex-column center">
+            <div class=" w-80 pa3 mt2 mh5 ml2">
               <label className="db tc fw6 lh-copy f6" htmlFor="subject">
                 subject
               </label>
               <input
-                className="pa2 input-reset ba bg-transparent grow hover-bg-light-gray hover-black w-100 outline-0-m"
+                className="pa2 input-reset ba bg-transparent hover-bg-light-gray hover-black w-80 outline-0-m center"
                 type="text"
                 name="subject"
                 id="subject"
                 onChange={this.handleChange}
               />
             </div>
-            <div class=" w-100 pa3 mt2 center">
+            <div class=" w-80 pa3 mt2 center">
               <Calendar
                 //onChange={this.onchange}
                 value={this.state.date}
