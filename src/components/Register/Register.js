@@ -7,8 +7,8 @@ import {auth,creatUserProfileDocument } from '../../firebase/firebase.utils';
 
 class Register extends React.Component {
 
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
 
     this.state={
       firstName:'',
@@ -63,6 +63,7 @@ class Register extends React.Component {
   
   }
   render(){
+    // eslint-disable-next-line no-unused-vars
     const {firstName, lastName,socialSecurityNumber, email, password,address, postNumber} = this.state;
 
   return (

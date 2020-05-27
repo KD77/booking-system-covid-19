@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router, Switch, Route , Redirect} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import CovidTest from "./components/CovidTest/CovidTest";
 import Navbar from "./components/Navbar/Navbar";
 import Register from "./components/Register/Register";
@@ -10,25 +10,10 @@ import UserLandingPage from "./components/UserLandingPage/UserLandingPage";
 import Footer from "./components/Footer/Footer";
 import UserEditPage from "./components/UserEditPage/UserEditPage"
 import {auth,creatUserProfileDocument} from './firebase/firebase.utils';
-
-
-
-// const ProtectedRoute = ({component: Test, ...rest}) => {
-//     return (
-//         <Route
-//             {...rest}
-//             render={props => {
-//                 if (auth.currentUser !== null) {
-//                     return <Test {...props} />;
-//                 } else {
-//                     return (
-//                         <Redirect to="/signin"/>
-//                     );
-//                 }
-//             }}
-//         />
-//     );
-// };
+import Booking from './components/Booking/Booking';
+// import Slots from './components/Booking/Slots';
+import About from './components/About/About'
+import UserList from "./components/UserList/UserList";
 
 
 
@@ -68,6 +53,10 @@ class App extends React.Component {
 
         return this.state.currentUser !== null
     }
+    signOut = () => {
+        auth.signOut();
+        this.props.history.replace('/')
+    };
 
 
     render() {
@@ -75,22 +64,25 @@ class App extends React.Component {
             <div>
             <Router>
                 <div>
-                    <Navbar logedIn = {this.isLogedIn()} currentUser={this.state.currentUser} />
-                    {/*<Navbar currentUser={this.state.currentUser}/>*/}
+                    <Navbar logedIn = {this.isLogedIn()} currentUser={this.state.currentUser} signOut={this.signOut} />
                     <Switch>
                     <Route path='/' exact component={LandingPage} />
                     <Route path='/signin' component = {Signin} />
-                    <Route path='/user' component = {UserLandingPage} />
-                    <Route path='/UserEditPage' component={UserEditPage}/>
+                    <Route exact path='/user' component = {UserLandingPage} />
+                    <Route path='/user/UserEditPage' component={UserEditPage}/>
                     <Route path='/register' component = {Register} />
-                    <Route path = '/covid' component={CovidTest}/>
+                    <Route path='/covid' component={CovidTest}/>
+                    <Route path='/user/booking' component = {Booking} />
+                    <Route path='/about' component = {About} />
+                    <Route path='/Admin/UserList' component={UserList}/>
+                    {/*<Route path='/user/slots' component = {Slots} />*/}
                     <Route path='*' component={() => <h1 className='tc '>404 NOT FOUND</h1>} />
                     </Switch>
                 </div>
              </Router>
-                <div className='footer'>
+
                     <Footer/>
-                </div>
+
             </div>
         );
     }

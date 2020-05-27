@@ -1,6 +1,8 @@
-/*.footer {*/
+#h3{
+    text-align:left;
+    font-size:2em;
+    color:#fff;
+    background:#CD5C5C;
+    padding-left:120px;
 
-/*    bottom: 0;*/
-/*    padding-top: 200px;*/
-/*    position: absolute;*/
-/*}*/
+}

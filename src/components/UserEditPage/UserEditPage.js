@@ -24,7 +24,9 @@ class UserEditPage extends Component{
 
 
     componentDidMount() {
+        // eslint-disable-next-line no-unused-vars
         const user = auth.onAuthStateChanged(user => {
+            // eslint-disable-next-line no-unused-vars
             const db = firestore
                 .collection("users")
                 .doc(user.uid)
