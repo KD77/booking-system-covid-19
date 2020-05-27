@@ -16,7 +16,7 @@ class sidebar extends React.Component {
          </a>*/}
           <img
             src={require("../../assets/images.png")}
-            class="br-100 h4 w4 dib ba b--black-05 pa2 "
+            className="br-100 h4 w4 dib ba b--black-05 pa2 "
             title="Photo of a kitty staring at you"
             alt=""
           />
@@ -25,7 +25,6 @@ class sidebar extends React.Component {
             <span className="ma2">{this.props.dat.lastName}</span>
             <br />
             <span>{this.props.dat.email}</span>
-            <div className="seperator"></div>
           </div>
         </div>
 

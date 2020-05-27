@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router, Switch, Route , Redirect} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import CovidTest from "./components/CovidTest/CovidTest";
 import Navbar from "./components/Navbar/Navbar";
 import Register from "./components/Register/Register";
@@ -89,7 +89,7 @@ class App extends React.Component {
                     <Route path='/user' component = {UserLandingPage} />
                     <Route path='/UserEditPage' component={UserEditPage}/>
                     <Route path='/register' component = {Register} />
-                    <Route path = '/covid' component={CovidTest}/>
+                    <Route path='/covid' component={CovidTest}/>
                     <Route path='/booking' component = {Booking} />
                     <Route path='/slots' component = {Slots} />
                     <Route path='*' component={() => <h1 className='tc '>404 NOT FOUND</h1>} />

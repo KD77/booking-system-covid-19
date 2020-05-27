@@ -1,8 +1,8 @@
 import React from 'react';
 import './LandingPage.css';
-import signIn from '../Signin/Signin'
 
-const LandingPage = (props) => {
+
+const LandingPage = () => {
     
   return (
       <article className="bg-white center mw5 ba b--black-10 mv4">

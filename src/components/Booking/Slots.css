@@ -1,0 +1,22 @@
+.frame {
+    display: flex;
+    justify-content: space-between; /* not center */
+}
+
+.content {
+    width: 200px;
+    height: 200px;
+}
+
+.btn {
+    width: 15px;
+    height: 20px;
+}
+
+.btnLeft{
+    background: red;
+}
+
+.btnRight {
+    background: blue;
+}

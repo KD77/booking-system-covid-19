@@ -57,7 +57,7 @@ const Navbar = props => {
           <div>
             <div className="tc fr mr3  h2 mv4 ">
               <a
-                class=" tc dark-gray pv2 ph3 bg-white hover-bg-near-white ba b--moon-gray br2 shadow-1 no-underline"
+                className=" tc dark-gray pv2 ph3 bg-white hover-bg-near-white ba b--moon-gray br2 shadow-1 no-underline"
                 href="/signin"
                 onClick={() => auth.signOut()}
               >

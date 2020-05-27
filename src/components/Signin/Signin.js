@@ -1,7 +1,7 @@
 import React from 'react';
 import './Signin.css';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
+// eslint-disable-next-line no-unused-vars
 import firebase, { auth,creatUserProfileDocument } from '../../firebase/firebase.utils';
 
 class Signin extends React.Component {
@@ -51,12 +51,12 @@ class Signin extends React.Component {
 
 
 
-    signInHandler =  () =>{
-        if (this.state.authenticated){
-            // this.props.history.push('/user')
-
-        }
-    }
+    // signInHandler =  () =>{
+    //     if (this.state.authenticated){
+    //         // this.props.history.push('/user')
+    //
+    //     }
+    // }
 
     render() {
         return (
