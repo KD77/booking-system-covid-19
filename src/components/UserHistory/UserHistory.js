@@ -132,6 +132,7 @@ class UserHistory extends React.Component {
                             </h2>
                             <a href="/user/booking">You can book a time from here</a>
 
+
                         </div>
                     </main>
                 </article>
