@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "./Logo.png";
+import Logo from "./logo.png";
 import "./Navbar.css";
 import Sidebar from "../Sidebar/Sidebar";
 import { AiOutlineLogout } from "react-icons/ai";
@@ -9,45 +9,116 @@ const Navbar = props => {
   console.log("Nav bar", props.logedIn);
 
   const generalNav = (
-    <div>
-      <nav className="db dt-l w-100 border-box pa3 ph5-l">
-        {/*eslint-disable-next-line*/}
-        <a
-          className="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l"
-          href="/"
-          title="Home"
-        >
-          <img src={Logo} className="dib w3 h3 br-100" alt="Logo" />
-        </a>
-        <div className="db dtc-l v-mid w-100 w-75-l tc tr-l">
-          {/*eslint-disable-next-line*/}
-          <a
-            className="link dim dark-gray f6 f5-l dib mr3 mr4-l"
-            href="/"
-            title="Home"
-          >
-            Home
-          </a>
-          {/*eslint-disable-next-line*/}
-          <a
-            className="link dim dark-gray f6 f5-l dib mr3 mr4-l"
-            href="/signin"
-            title="Sign In"
-          >
-            Sign In
-          </a>
-          {/*eslint-disable-next-line*/}
-          <a
-            className="link dim dark-gray f6 f5-l dib"
-            href="/register"
-            title="Register"
-          >
-            Register
-          </a>
-          <h1>{}</h1>
+    // <div>
+    //   <nav className="db dt-l w-100 border-box pa3 ph5-l">
+    //     <div>
+    //     {/*eslint-disable-next-line*/}
+    //     <a
+    //       className="mid-gray link dim w-10-l tc tl-l  "
+    //       href="/"
+    //       title="Home"
+    //     >
+    //       <img src={Logo} className=" w3 grow h3 br-100" alt="Logo" />
+    //     </a>
+    //     </div>
+    //
+    //     <div className="db dtc-l v-mid w-100 w-75-l tc tr-l">
+    //
+    //       {/*eslint-disable-next-line*/}
+    //       <a
+    //         className="link dim dark-gray f6 f5-l dib mr3 mr4-l"
+    //         href="/"
+    //         title="Home"
+    //       >
+    //         Home
+    //       </a>
+    //       {/*eslint-disable-next-line*/}
+    //       <a
+    //         className="link dim dark-gray f6 f5-l dib mr3 mr4-l"
+    //         href="/signin"
+    //         title="Sign In"
+    //       >
+    //         Sign In
+    //       </a>
+    //       {/*eslint-disable-next-line*/}
+    //       <a
+    //         className="link dim dark-gray f6 f5-l dib"
+    //         href="/register"
+    //         title="Register"
+    //       >
+    //         Register
+    //       </a>
+    //       <h1>{}</h1>
+    //     </div>
+    //   </nav>
+    // </div>
+
+      <div className=" center ph2-ns">
+
+        {/*T1*/}
+        <div className="cf ph2-ns">
+          <div className="fl w-100 w-third-ns pa2">
+              <a
+                className="mid-gray link dim w-10-l tc tl-l  "
+                href="/"
+                title="Home"
+               >
+                 <img src={Logo} className=" w3 grow h3 br-100" alt="Logo" />
+               </a>
+             </div>
+
+           {/*T2*/}
+          <div className="fl w-50 w-third-ns pa2 ">
+
+            <div className=" pv2 tc f1 title">Medical Appointment</div>
+          </div>
+
+         {/*T3*/}
+          <div className="fl w-50 w-third-ns pa2">
+
+              <div className=" pv4 tr">
+
+                {/*eslint-disable-next-line*/}
+                <a
+                    className="link dim dark-gray f6 f5-l dib mr3 mr4-l"
+                    href="/"
+                    title="Home"
+                >
+                  Home
+                </a>
+
+                {/*eslint-disable-next-line*/}
+                <a
+                    className="link dim dark-gray f6 f5-l dib mr3 mr4-l"
+                    href="/about"
+                    title="Home"
+                >
+                  About
+                </a>
+
+                {/*eslint-disable-next-line*/}
+                <a
+                    className="link dim dark-gray f6 f5-l dib mr3 mr4-l"
+                    href="/signin"
+                    title="Sign In"
+                >
+                  Sign In
+                </a>
+
+                {/*eslint-disable-next-line*/}
+                <a
+                    className="link dim dark-gray f6 f5-l dib"
+                    href="/register"
+                    title="Register"
+                >
+                  Register
+                </a>
+              </div>
+
+
+          </div>
         </div>
-      </nav>
-    </div>
+      </div>
   );
 
   const userNav = (
@@ -83,3 +154,6 @@ const Navbar = props => {
 };
 
 export default Navbar;
+
+
+
