@@ -28,7 +28,7 @@ class sidebar extends React.Component {
           </div>
         </div>
 
-        <a className=" menu-item " href="/user">
+        <a className=" menu-item " href="/user/userHistory">
           <FiHome /> Home
         </a>
 

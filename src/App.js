@@ -11,9 +11,10 @@ import Footer from "./components/Footer/Footer";
 import UserEditPage from "./components/UserEditPage/UserEditPage"
 import {auth,creatUserProfileDocument} from './firebase/firebase.utils';
 import Booking from './components/Booking/Booking';
-// import Slots from './components/Booking/Slots';
 import About from './components/About/About'
 import UserList from "./components/UserList/UserList";
+import UserHistory from "./components/UserHistory/UserHistory";
+// import Slots from './components/Booking/Slots';
 
 
 
@@ -70,6 +71,7 @@ class App extends React.Component {
                     <Route path='/signin' component = {Signin} />
                     <Route exact path='/user' component = {UserLandingPage} />
                     <Route path='/user/UserEditPage' component={UserEditPage}/>
+                    <Route path='/user/UserHistory' component={UserHistory}/>
                     <Route path='/register' component = {Register} />
                     <Route path='/covid' component={CovidTest}/>
                     <Route path='/user/booking' component = {Booking} />

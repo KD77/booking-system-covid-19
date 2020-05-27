@@ -44,6 +44,7 @@ class UserEditPage extends Component{
                             email:data.email,
                             password:data.password,
                         });
+                        // console.log("test from here",this.state.firstName);
                     } else {
                         console.log("No such a user!");
                     }
