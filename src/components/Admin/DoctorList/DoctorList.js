@@ -1,6 +1,6 @@
 import React from 'react';
 import {firestore} from "../../../Database/firebase.utils";
-import './nursesList.css'
+import './DoctorList.css'
 
 class NursesList extends React.Component {
     constructor() {

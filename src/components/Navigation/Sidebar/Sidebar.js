@@ -70,12 +70,17 @@ class sidebar extends React.Component {
                     <span>{this.props.dat.email}</span>
                 </div>
             </div>
+
+            <a className="menu-item" href="/Admin/listOfAppointment">
+                <GoListUnordered /> Appointments
+            </a>
+
             <a className="menu-item" href="/Admin/UserList">
                 <GoListUnordered /> Users List
             </a>
 
-            <a className="menu-item" href="/Admin/nursesList">
-                <GoListUnordered /> Nurses List
+            <a className="menu-item" href="/Admin/doctorsList">
+                <GoListUnordered /> Doctors List
             </a>
 
             <a className="menu-item " href="/user/UserEditPage">
