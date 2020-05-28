@@ -103,16 +103,16 @@ class CovidTest extends Component {
     }
     else if (isEnd===true && totalScore<=16) {
       return (
-          <div className="f3 br3 ba b--black-10  mw7 shadow-5 vh-75-ns center">
+          <div className="f3 br3 ba b--black-10  mw7 shadow-5 vh-75-ns center tc">
             <h1 > The self-assessment test result </h1>
             'You have not listed any symptoms of covid-19.
             Continue to wash your hands carefully and often and follow the guidelines and
             recommendations that the Public Health Authority and your region have developed.<br/><br/><br/>
-            <button
-                onClick={this.refreshThePage}
-            >
+            <div className='tc'>
+            <button onClick={this.refreshThePage}>
               Do the test again
             </button>
+            </div>
           </div>
 
       );
@@ -120,7 +120,7 @@ class CovidTest extends Component {
 
     else {
       return (
-          <div className="br3  b--black-10  mw7  vh-75-ns tc center test ">
+          <div className="br3 ba b--black-10 mv4 w-auto-l w-50-m w-25-l mw6 shadow-5 center test ">
             <h1>{this.state.questions} </h1>
 
             {options.map((option, i) => (
@@ -137,19 +137,23 @@ class CovidTest extends Component {
 
             ))}
             {currentQuestion < data.length - 1 && (
-                <button
+                <div className='tc '>
+                 <button
                     className='f3'
                     disabled={this.state.disabled}
                     onClick={this.nextQuestionHandler}
-                >
+                 >
                   Next
-                </button>
+                 </button>
+                </div>
             )}
             {/* //adding a finish button */}
             {currentQuestion === data.length - 1 && (
+                <div className='tc'>
                 <button className="f3" onClick={this.finishHandler}>
                   Finish
                 </button>
+                </div>
             )}
           </div>
       );
