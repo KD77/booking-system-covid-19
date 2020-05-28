@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { auth, firestore } from "../../firebase/firebase.utils";
+import { auth, firestore } from "../../../Database/firebase.utils";
 // import { useHistory } from 'react-router-dom';
 import { Redirect } from 'react-router-dom'
 import './Slots.css'

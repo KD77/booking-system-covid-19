@@ -1,5 +1,5 @@
 import React ,{Component} from "react";
-import { auth, firestore } from "../../firebase/firebase.utils";
+import { auth, firestore } from "../../../Database/firebase.utils";
 
 // khale user page
 //hello
@@ -46,7 +46,7 @@ class UserLandingPage extends Component {
             <article className="mw5 ma3 bg-white br3 pa3 pa4-ns mv3 ba b--black-10 center">
                 <div className="tc">
                     <img
-                        src={require("../../assets/images.png")}
+                        src={require("../../../assets/images.png")}
                         className="br-100 h4 w4 dib ba b--black-05 pa2"
                         title="Photo of a kitty staring at you"
                      alt='logo'/></div>

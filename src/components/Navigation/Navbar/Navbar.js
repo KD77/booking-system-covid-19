@@ -3,7 +3,7 @@ import Logo from "./logo.png";
 import "./Navbar.css";
 import Sidebar from "../Sidebar/Sidebar";
 import { AiOutlineLogout } from "react-icons/ai";
-import { auth } from "../../firebase/firebase.utils";
+import { auth } from "../../../Database/firebase.utils";
 
 const Navbar = props => {
 

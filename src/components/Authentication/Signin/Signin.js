@@ -2,7 +2,7 @@ import React from 'react';
 import './Signin.css';
 
 // eslint-disable-next-line no-unused-vars
-import firebase, { auth,creatUserProfileDocument } from '../../firebase/firebase.utils';
+import firebase, { auth,creatUserProfileDocument } from '../../../Database/firebase.utils';
 
 class Signin extends React.Component {
     constructor(props) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {firestore} from "../../firebase/firebase.utils";
+import {firestore} from "../../../Database/firebase.utils";
 import './UserList.css'
 
 class UserList extends React.Component {

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import {auth, firestore} from "../../firebase/firebase.utils";
+import {auth, firestore} from "../../../Database/firebase.utils";
 import {FaUserCircle, AiOutlineMail ,MdLocationOn} from "react-icons/all";
-import'./UserEditPage.css'
+import './UserEditPage.css'
 
 class UserEditPage extends Component{
 

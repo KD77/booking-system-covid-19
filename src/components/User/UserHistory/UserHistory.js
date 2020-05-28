@@ -1,5 +1,5 @@
 import React from 'react';
-import {auth, firestore} from "../../firebase/firebase.utils";
+import {auth, firestore} from "../../../Database/firebase.utils";
 import { FaUserCircle } from "react-icons/all";
 
 
