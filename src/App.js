@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Register from "./components/Register/Register";
 import Signin from "./components/Signin/Signin";
 import LandingPage from "./components/LandingPage/LandingPage";
+import ListOfAppointments from "./components/ListOfAppointments/ListOfAppointments";
 // import UserLandingPage from "./components/UserLandingPage/UserLandingPage";
 import Footer from "./components/Footer/Footer";
 import UserEditPage from "./components/UserEditPage/UserEditPage"
@@ -85,6 +86,7 @@ class App extends React.Component {
                     <Route path='/about' component = {About} />
                     <Route path='/Admin/UserList' component={UserList}/>
                     <Route path='/Admin/nursesList' component={NursesList}/>
+                    <Route path='/Admin/ListOfAppointments' component={ListOfAppointments}/>
                     {/*<Route path='/user/slots' component = {Slots} />*/}
                     <Route path='*' component={() => <h1 className='tc '>404 NOT FOUND</h1>} />
                     </Switch>
