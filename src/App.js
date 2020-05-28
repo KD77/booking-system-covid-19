@@ -55,10 +55,16 @@ class App extends React.Component {
 
         return this.state.currentUser !== null
     }
+
+    isAdmin () {
+        return this.state.currentUser !== null && this.state.currentUser.email === 'admin@admin.com'
+    }
+
     signOut = () => {
         auth.signOut();
         this.props.history.replace('/')
     };
+
 
 
     render() {
@@ -66,7 +72,7 @@ class App extends React.Component {
             <div>
             <Router>
                 <div>
-                    <Navbar logedIn = {this.isLogedIn()} currentUser={this.state.currentUser} signOut={this.signOut} />
+                    <Navbar logedIn = {this.isLogedIn()} currentUser={this.state.currentUser} signOut={this.signOut} admin = {this.isAdmin()} />
                     <Switch>
                     <Route path='/' exact component={LandingPage} />
                     <Route path='/signin' component = {Signin} />

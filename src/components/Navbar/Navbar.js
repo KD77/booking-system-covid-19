@@ -7,6 +7,8 @@ import { auth } from "../../firebase/firebase.utils";
 
 const Navbar = props => {
 
+  // console.log('Admin Check',props.admin)
+
   const generalNav = (
 
       <div className=" center ph2-ns">
@@ -97,12 +99,41 @@ const Navbar = props => {
             <img src={Logo} className="w3 h3 br--top-m" alt="Logo" />
           </a>
         </div>
-        <Sidebar dat={props.currentUser} />
+        <Sidebar dat={props.currentUser} ad = {props.admin}/>
       </header>
     </div>
   );
 
-  if (props.logedIn) {
+  // Admin Nav
+  const adminNav = (
+      <div>
+        <header className=" bg-light-gray">
+          <div>
+            <div>
+              <div className="tc fr mr3  h2 mv4 ">
+                <a
+                    className=" tc dark-gray pv2 ph3 bg-white hover-bg-near-white ba b--moon-gray br2 shadow-1 no-underline"
+                    href="/signin"
+                    onClick={() => auth.signOut()}
+                >
+                  Admin Logout
+                  <AiOutlineLogout class="ml2 tc" />
+                </a>
+              </div>
+            </div>
+            <a href="/" title="Home" className=" ml6">
+              <img src={Logo} className="w3 h3 br--top-m" alt="Logo" />
+            </a>
+          </div>
+          <Sidebar dat={props.currentUser}  ad = {props.admin}/>
+        </header>
+      </div>
+  );
+
+  if (props.admin) {
+    return adminNav;
+  }
+  else if (props.logedIn) {
     return userNav;
   } else {
     return generalNav;

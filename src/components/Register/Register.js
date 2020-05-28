@@ -53,7 +53,7 @@ class Register extends React.Component {
       console.error(error)
       
     }
-    this.props.history.push("/user/")
+    this.props.history.push("/signin")
   };
   handleChange=event=>{
    // const { name, value}=event.target.value;
