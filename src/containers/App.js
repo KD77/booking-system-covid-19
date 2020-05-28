@@ -14,7 +14,8 @@ import Booking from '../components/User/Booking/Booking';
 import About from '../components/MainPage/About/About'
 import UserList from "../components/User/UserList/UserList";
 import UserHistory from "../components/User/UserHistory/UserHistory";
-import NursesList from "../components/Admin/NursesList/NursesList";
+import DoctorsList from "../components/Admin/DoctorList/DoctorList";
+import ListOfAppointment from '../components/Admin/ListOfAppointments/ListOfAppointments'
 
 
 
@@ -84,8 +85,8 @@ class App extends React.Component {
                     <Route path='/user/booking' component = {Booking} />
                     <Route path='/about' component = {About} />
                     <Route path='/Admin/UserList' component={UserList}/>
-                    <Route path='/Admin/nursesList' component={NursesList}/>
-                    {/*<Route path='/user/slots' component = {Slots} />*/}
+                    <Route path='/Admin/doctorsList' component={DoctorsList}/>
+                    <Route path='/Admin/listOfAppointment' component={ListOfAppointment}/>
                     <Route path='*' component={() => <h1 className='tc '>404 NOT FOUND</h1>} />
                     </Switch>
                 </div>
