@@ -88,7 +88,7 @@ export default class Slots extends Component {
         <h2 className='tc'>{this.state.msg} </h2>
         <div className=" tc w-80 pa3 mh4 ml4 mt2 mv2 frame">
 
-          <a href="/user" className='f4 link dim br2 ph3 pv2 mb2 dib white bg-light-red '><GrReturn/>Return</a>
+          <a href="/user/userHistory" className='f4 link dim br2 ph3 pv2 mb2 dib white bg-light-red '><GrReturn/>Return</a>
           {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a
               href="#"

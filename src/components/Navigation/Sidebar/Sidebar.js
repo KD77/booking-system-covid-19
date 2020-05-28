@@ -33,7 +33,7 @@ class sidebar extends React.Component {
 
 
          <a className="menu-item" href="/user/booking">
-             <FaRegCalendarPlus /> Appointments
+             <FaRegCalendarPlus /> Book an Appointment
          </a>
 
          <a className="menu-item " href="/user/UserEditPage">
@@ -75,7 +75,7 @@ class sidebar extends React.Component {
             </a>
 
             <a className="menu-item" href="/Admin/nursesList">
-                <GoListUnordered /> Nurses
+                <GoListUnordered /> Nurses List
             </a>
 
             <a className="menu-item " href="/user/UserEditPage">
