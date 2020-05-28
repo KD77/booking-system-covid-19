@@ -59,7 +59,7 @@ class NursesList extends React.Component {
                     <td className="pa3">{phoneNumber}</td>
                     <td className="pa3">{
                         <div className="mv3">
-                            <button onClick={() => this.editNurse(this.state.nursesList[index].UID)}>Edit</button>
+                            <button className='f6 link dim br1 ph3 pv2 mb2 dib white bg-mid-gray' onClick={() => this.editNurse(this.state.nursesList[index].UID)}>Edit</button>
                         </div>}
                     </td>
 
