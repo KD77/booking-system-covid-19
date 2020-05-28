@@ -46,6 +46,7 @@ class NursesList extends React.Component {
 
     renderTableData() {
         return this.state.nursesList.map((nurse, index) => {
+            // eslint-disable-next-line no-unused-vars
             const {  key, name, lastName, email, phoneNumber } = nurse //destructuring
             return (
 
@@ -64,7 +65,6 @@ class NursesList extends React.Component {
 
                 </tr>
             )
-            console.log()
         })
     }
 
@@ -74,6 +74,7 @@ class NursesList extends React.Component {
             UID:nurseId,
         });
         console.log("test nurse id",nurseId);
+        // eslint-disable-next-line no-unused-vars
         const db = firestore
             .collection("nurses")
             .doc(nurseId)

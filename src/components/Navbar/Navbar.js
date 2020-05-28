@@ -8,49 +8,6 @@ import { auth } from "../../firebase/firebase.utils";
 const Navbar = props => {
 
   const generalNav = (
-    // <div>
-    //   <nav className="db dt-l w-100 border-box pa3 ph5-l">
-    //     <div>
-    //     {/*eslint-disable-next-line*/}
-    //     <a
-    //       className="mid-gray link dim w-10-l tc tl-l  "
-    //       href="/"
-    //       title="Home"
-    //     >
-    //       <img src={Logo} className=" w3 grow h3 br-100" alt="Logo" />
-    //     </a>
-    //     </div>
-    //
-    //     <div className="db dtc-l v-mid w-100 w-75-l tc tr-l">
-    //
-    //       {/*eslint-disable-next-line*/}
-    //       <a
-    //         className="link dim dark-gray f6 f5-l dib mr3 mr4-l"
-    //         href="/"
-    //         title="Home"
-    //       >
-    //         Home
-    //       </a>
-    //       {/*eslint-disable-next-line*/}
-    //       <a
-    //         className="link dim dark-gray f6 f5-l dib mr3 mr4-l"
-    //         href="/signin"
-    //         title="Sign In"
-    //       >
-    //         Sign In
-    //       </a>
-    //       {/*eslint-disable-next-line*/}
-    //       <a
-    //         className="link dim dark-gray f6 f5-l dib"
-    //         href="/register"
-    //         title="Register"
-    //       >
-    //         Register
-    //       </a>
-    //       <h1>{}</h1>
-    //     </div>
-    //   </nav>
-    // </div>
 
       <div className=" center ph2-ns">
 

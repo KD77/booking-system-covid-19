@@ -1,6 +1,6 @@
 import React from 'react';
 import {auth, firestore} from "../../firebase/firebase.utils";
-import {AiOutlineMail, FaUserCircle, MdLocationOn} from "react-icons/all";
+import { FaUserCircle } from "react-icons/all";
 
 
 class UserHistory extends React.Component {
@@ -33,7 +33,9 @@ class UserHistory extends React.Component {
                                 userExists:true,
                             });
 
+                            // eslint-disable-next-line react/no-direct-mutation-state
                             this.state.str = this.state.date;
+                            // eslint-disable-next-line react/no-direct-mutation-state
                             this.state.string = this.state.str.split(",");
                             this.setState({
                                 date:this.state.string[0],
@@ -108,7 +110,7 @@ class UserHistory extends React.Component {
 
 
                             <div className="mv3">
-                                <button onClick={this.cancelAppointment}>Cancel Your Appointment</button>
+                                <button className='f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-red' onClick={this.cancelAppointment}>Cancel Your Appointment</button>
                             </div>
                             <div className="mv3">
                                 <a href="/user/booking">You can change your time from here</a>

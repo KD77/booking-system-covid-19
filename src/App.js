@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Register from "./components/Register/Register";
 import Signin from "./components/Signin/Signin";
 import LandingPage from "./components/LandingPage/LandingPage";
-import UserLandingPage from "./components/UserLandingPage/UserLandingPage";
+// import UserLandingPage from "./components/UserLandingPage/UserLandingPage";
 import Footer from "./components/Footer/Footer";
 import UserEditPage from "./components/UserEditPage/UserEditPage"
 import {auth,creatUserProfileDocument} from './firebase/firebase.utils';
@@ -70,7 +70,7 @@ class App extends React.Component {
                     <Switch>
                     <Route path='/' exact component={LandingPage} />
                     <Route path='/signin' component = {Signin} />
-                    <Route exact path='/user' component = {UserLandingPage} />
+                    {/*<Route exact path='/user' component = {UserLandingPage} />*/}
                     <Route path='/user/UserEditPage' component={UserEditPage}/>
                     <Route path='/user/UserHistory' component={UserHistory}/>
                     <Route path='/register' component = {Register} />

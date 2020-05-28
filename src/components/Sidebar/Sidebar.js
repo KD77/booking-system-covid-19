@@ -45,7 +45,7 @@ class sidebar extends React.Component {
           <FiLogOut /> Log out
         </a>
 
-        <a className="menu-item" href="/">
+        <a className="menu-item" href="/about">
           <FcAbout /> About Us
         </a>
       </Menu>
