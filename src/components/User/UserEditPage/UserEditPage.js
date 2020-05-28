@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import {auth, firestore} from "../../firebase/firebase.utils";
+import {auth, firestore} from "../../../Database/firebase.utils";
 import {FaUserCircle, AiOutlineMail ,MdLocationOn} from "react-icons/all";
-import'./UserEditPage.css'
+import './UserEditPage.css'
 
 class UserEditPage extends Component{
 
@@ -44,6 +44,7 @@ class UserEditPage extends Component{
                             email:data.email,
                             password:data.password,
                         });
+                        // console.log("test from here",this.state.firstName);
                     } else {
                         console.log("No such a user!");
                     }
@@ -153,7 +154,7 @@ class UserEditPage extends Component{
 
 
                             <div className="mv3">
-                                <button onClick={this.activeEditMode}>Update</button>
+                                <button className='f6 link dim br3 ph3 pv2 mb2 dib white bg-dark-blue' onClick={this.activeEditMode}>Update</button>
                                 {/*<a href="/EditMode">*/}
                                 {/*    edit*/}
                                 {/*</a>*/}

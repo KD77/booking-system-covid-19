@@ -2,7 +2,7 @@ import React from 'react';
 import './Signin.css';
 
 // eslint-disable-next-line no-unused-vars
-import firebase, { auth,creatUserProfileDocument } from '../../firebase/firebase.utils';
+import firebase, { auth,creatUserProfileDocument } from '../../../Database/firebase.utils';
 
 class Signin extends React.Component {
     constructor(props) {
@@ -14,8 +14,8 @@ class Signin extends React.Component {
             authenticated: false,
             messege : ''
         };
-        console.log(this.state)
     }
+
 
 
 
@@ -35,9 +35,11 @@ class Signin extends React.Component {
 
         });
 
-
-            if (this.state.authenticated) {
-                this.props.history.push('/user')
+            if (this.state.authenticated && email === 'admin@admin.com' ) {
+                this.props.history.push('/Admin/UserList')
+            }
+            else if (this.state.authenticated) {
+                this.props.history.push('/user/UserHistory')
             } else
                 this.setState({messege: 'Incorrect username or password. Please try again!'})
         }
@@ -48,15 +50,6 @@ class Signin extends React.Component {
         });
 
     }
-
-
-
-    // signInHandler =  () =>{
-    //     if (this.state.authenticated){
-    //         // this.props.history.push('/user')
-    //
-    //     }
-    // }
 
     render() {
         return (
