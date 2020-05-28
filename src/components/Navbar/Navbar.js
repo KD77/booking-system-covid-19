@@ -6,7 +6,6 @@ import { AiOutlineLogout } from "react-icons/ai";
 import { auth } from "../../firebase/firebase.utils";
 
 const Navbar = props => {
-  console.log("Nav bar", props.logedIn);
 
   const generalNav = (
     // <div>
