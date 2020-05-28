@@ -37,7 +37,7 @@ class Signin extends React.Component {
 
 
             if (this.state.authenticated) {
-                this.props.history.push('/user')
+                this.props.history.push('/user/UserHistory')
             } else
                 this.setState({messege: 'Incorrect username or password. Please try again!'})
         }

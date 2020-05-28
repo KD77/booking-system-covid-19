@@ -28,9 +28,10 @@ class sidebar extends React.Component {
           </div>
         </div>
 
-        <a className=" menu-item " href="/user">
+        <a className=" menu-item " href="/user/userHistory">
           <FiHome /> Home
         </a>
+
 
         <a className="menu-item" href="/user/booking">
           <FaRegCalendarPlus /> Appointments
@@ -44,7 +45,7 @@ class sidebar extends React.Component {
           <FiLogOut /> Log out
         </a>
 
-        <a className="menu-item" href="/">
+        <a className="menu-item" href="/about">
           <FcAbout /> About Us
         </a>
       </Menu>

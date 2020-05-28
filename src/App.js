@@ -6,14 +6,16 @@ import Navbar from "./components/Navbar/Navbar";
 import Register from "./components/Register/Register";
 import Signin from "./components/Signin/Signin";
 import LandingPage from "./components/LandingPage/LandingPage";
-import UserLandingPage from "./components/UserLandingPage/UserLandingPage";
+// import UserLandingPage from "./components/UserLandingPage/UserLandingPage";
 import Footer from "./components/Footer/Footer";
 import UserEditPage from "./components/UserEditPage/UserEditPage"
 import {auth,creatUserProfileDocument} from './firebase/firebase.utils';
 import Booking from './components/Booking/Booking';
-// import Slots from './components/Booking/Slots';
 import About from './components/About/About'
 import UserList from "./components/UserList/UserList";
+import UserHistory from "./components/UserHistory/UserHistory";
+import NursesList from "./components/NursesList/NursesList";
+// import Slots from './components/Booking/Slots';
 
 
 
@@ -68,13 +70,15 @@ class App extends React.Component {
                     <Switch>
                     <Route path='/' exact component={LandingPage} />
                     <Route path='/signin' component = {Signin} />
-                    <Route exact path='/user' component = {UserLandingPage} />
+                    {/*<Route exact path='/user' component = {UserLandingPage} />*/}
                     <Route path='/user/UserEditPage' component={UserEditPage}/>
+                    <Route path='/user/UserHistory' component={UserHistory}/>
                     <Route path='/register' component = {Register} />
                     <Route path='/covid' component={CovidTest}/>
                     <Route path='/user/booking' component = {Booking} />
                     <Route path='/about' component = {About} />
                     <Route path='/Admin/UserList' component={UserList}/>
+                    <Route path='/Admin/nursesList' component={NursesList}/>
                     {/*<Route path='/user/slots' component = {Slots} />*/}
                     <Route path='*' component={() => <h1 className='tc '>404 NOT FOUND</h1>} />
                     </Switch>
@@ -82,6 +86,7 @@ class App extends React.Component {
              </Router>
 
                     <Footer/>
+
 
             </div>
         );
