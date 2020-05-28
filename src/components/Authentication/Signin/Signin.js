@@ -36,7 +36,7 @@ class Signin extends React.Component {
         });
 
             if (this.state.authenticated && email === 'admin@admin.com' ) {
-                this.props.history.push('/Admin/UserList')
+                this.props.history.push('/Admin/listOfAppointment')
             }
             else if (this.state.authenticated) {
                 this.props.history.push('/user/UserHistory')
