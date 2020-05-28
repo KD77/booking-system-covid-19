@@ -4,7 +4,7 @@ import "./Sidebar.css";
 import { FiHome, FiLogOut, FiSettings } from "react-icons/fi";
 import { FaRegCalendarPlus ,GoListUnordered} from "react-icons/all";
 import { FcAbout } from "react-icons/all";
-import { auth } from "../../firebase/firebase.utils";
+import { auth } from "../../../Database/firebase.utils";
 
 class sidebar extends React.Component {
      userSideBar = (
@@ -14,7 +14,7 @@ class sidebar extends React.Component {
             <FaUserCircle size={27} />
          </a>*/}
              <img
-                 src={require("../../assets/images.png")}
+                 src={require("../../../assets/images.png")}
                  className="br-100 h4 w4 dib ba b--black-05 pa2 "
                  title="Photo of a kitty staring at you"
                  alt=""
@@ -58,7 +58,7 @@ class sidebar extends React.Component {
             <FaUserCircle size={27} />
          </a>*/}
                 <img
-                    src={require("../../assets/images.png")}
+                    src={require("../../../assets/images.png")}
                     className="br-100 h4 w4 dib ba b--black-05 pa2 "
                     title="Photo of a kitty staring at you"
                     alt=""

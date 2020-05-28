@@ -1,21 +1,21 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import CovidTest from "./components/CovidTest/CovidTest";
-import Navbar from "./components/Navbar/Navbar";
-import Register from "./components/Register/Register";
-import Signin from "./components/Signin/Signin";
-import LandingPage from "./components/LandingPage/LandingPage";
+import CovidTest from "../components/MainPage/CovidTest/CovidTest";
+import Navbar from "../components/Navigation/Navbar/Navbar";
+import Register from "../components/Authentication/Register/Register";
+import Signin from "../components/Authentication/Signin/Signin";
+import LandingPage from "../components/MainPage/LandingPage/LandingPage";
 // import UserLandingPage from "./components/UserLandingPage/UserLandingPage";
-import Footer from "./components/Footer/Footer";
-import UserEditPage from "./components/UserEditPage/UserEditPage"
-import {auth,creatUserProfileDocument} from './firebase/firebase.utils';
-import Booking from './components/Booking/Booking';
-import About from './components/About/About'
-import UserList from "./components/UserList/UserList";
-import UserHistory from "./components/UserHistory/UserHistory";
-import NursesList from "./components/NursesList/NursesList";
-// import Slots from './components/Booking/Slots';
+import Footer from "../components/MainPage/Footer/Footer";
+import UserEditPage from "../components/User/UserEditPage/UserEditPage"
+import {auth,creatUserProfileDocument} from '../Database/firebase.utils';
+import Booking from '../components/User/Booking/Booking';
+import About from '../components/MainPage/About/About'
+import UserList from "../components/User/UserList/UserList";
+import UserHistory from "../components/User/UserHistory/UserHistory";
+import NursesList from "../components/Admin/NursesList/NursesList";
+
 
 
 
