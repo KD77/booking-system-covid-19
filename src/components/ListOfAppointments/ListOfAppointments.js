@@ -51,6 +51,7 @@ class ListOfAppointments extends React.Component {
             });
 
 
+
         const dbNurses = firestore.collection("nurses").get();
         const nurses=dbNurses
             .then(snapshot =>{
