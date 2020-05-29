@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route  } from 'react-router-dom';
 import CovidTest from "../components/MainPage/CovidTest/CovidTest";
 import Navbar from "../components/Navigation/Navbar/Navbar";
 import Register from "../components/Authentication/Register/Register";
@@ -27,6 +27,8 @@ class App extends React.Component {
         this.state={
             currentUser:{}
         };
+
+        console.log('Appp goooooo',this.state.currentUser)
         
     }
     unsubscribeFromAuth=null;
@@ -61,10 +63,40 @@ class App extends React.Component {
         return this.state.currentUser !== null && this.state.currentUser.email === 'admin@admin.com'
     }
 
+
+
     signOut = () => {
         auth.signOut();
         this.props.history.replace('/')
     };
+
+    authUser =  <div>
+        <Route path='/user/UserEditPage' component={UserEditPage}/>
+        <Route path='/user/UserHistory' component={UserHistory}/>
+        <Route path='/user/booking' component = {Booking} />
+    </div>
+
+    autAdmin = <div>
+        <Route path='/Admin/UserList' component={UserList}/>
+        <Route path='/Admin/doctorsList' component={DoctorsList}/>
+        <Route path='/Admin/listOfAppointment' component={ListOfAppointment}/>
+        <Route path='/user/UserEditPage' component={UserEditPage}/>
+    </div>
+
+    chechUserRoute () {
+
+        if (this.isLogedIn())
+           return  this.authUser
+
+    }
+
+    chechAdminRoute () {
+        if (this.isLogedIn() && this.isAdmin())
+
+            return this.autAdmin
+    }
+
+
 
 
 
@@ -77,24 +109,16 @@ class App extends React.Component {
                     <Switch>
                     <Route path='/' exact component={LandingPage} />
                     <Route path='/signin' component = {Signin} />
-                    {/*<Route exact path='/user' component = {UserLandingPage} />*/}
-                    <Route path='/user/UserEditPage' component={UserEditPage}/>
-                    <Route path='/user/UserHistory' component={UserHistory}/>
                     <Route path='/register' component = {Register} />
                     <Route path='/covid' component={CovidTest}/>
-                    <Route path='/user/booking' component = {Booking} />
                     <Route path='/about' component = {About} />
-                    <Route path='/Admin/UserList' component={UserList}/>
-                    <Route path='/Admin/doctorsList' component={DoctorsList}/>
-                    <Route path='/Admin/listOfAppointment' component={ListOfAppointment}/>
+                        {this.chechAdminRoute()}
+                        {this.chechUserRoute()}
                     <Route path='*' component={() => <h1 className='tc '>404 NOT FOUND</h1>} />
                     </Switch>
                 </div>
              </Router>
-
                     <Footer/>
-
-
             </div>
         );
     }
