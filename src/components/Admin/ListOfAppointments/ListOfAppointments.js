@@ -3,6 +3,7 @@ import { firestore} from "../../../Database/firebase.utils";
 import {FaUserCircle} from "react-icons/all";
 
 
+
 class ListOfAppointments extends React.Component {
 
     constructor() {
@@ -80,6 +81,9 @@ class ListOfAppointments extends React.Component {
             });
     }
 
+
+
+
     cancelAppointment(userId){
         // eslint-disable-next-line no-unused-vars
         const db = firestore
@@ -87,7 +91,7 @@ class ListOfAppointments extends React.Component {
             .doc(userId)
             .delete()
             .then(function() {
-                alert("Document successfully deleted! Please reload the page");
+                window.location.reload();
             })
             .catch(error => {
                 console.error(error);
