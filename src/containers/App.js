@@ -83,17 +83,14 @@ class App extends React.Component {
         <Route path='/user/UserEditPage' component={UserEditPage}/>
     </div>
 
-    chechUserRoute () {
 
-        if (this.isLogedIn())
-           return  this.authUser
-
-    }
-
-    chechAdminRoute () {
+    ProtectedRoute () {
         if (this.isLogedIn() && this.isAdmin())
 
             return this.autAdmin
+
+        else if (this.isLogedIn())
+            return  this.authUser
     }
 
 
@@ -112,8 +109,7 @@ class App extends React.Component {
                     <Route path='/register' component = {Register} />
                     <Route path='/covid' component={CovidTest}/>
                     <Route path='/about' component = {About} />
-                        {this.chechAdminRoute()}
-                        {this.chechUserRoute()}
+                    {this.ProtectedRoute()}
                     <Route path='*' component={() => <h1 className='tc '>404 NOT FOUND</h1>} />
                     </Switch>
                 </div>
