@@ -6,7 +6,6 @@ import Navbar from "../components/Navigation/Navbar/Navbar";
 import Register from "../components/Authentication/Register/Register";
 import Signin from "../components/Authentication/Signin/Signin";
 import LandingPage from "../components/MainPage/LandingPage/LandingPage";
-// import UserLandingPage from "./components/UserLandingPage/UserLandingPage";
 import Footer from "../components/MainPage/Footer/Footer";
 import UserEditPage from "../components/User/UserEditPage/UserEditPage"
 import {auth,creatUserProfileDocument} from '../Database/firebase.utils';
