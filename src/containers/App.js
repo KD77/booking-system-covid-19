@@ -12,7 +12,7 @@ import UserEditPage from "../components/User/UserEditPage/UserEditPage"
 import {auth,creatUserProfileDocument} from '../Database/firebase.utils';
 import Booking from '../components/User/Booking/Booking';
 import About from '../components/MainPage/About/About'
-import UserList from "../components/User/UserList/UserList";
+import UserList from "../components/Admin/UserList/UserList";
 import UserHistory from "../components/User/UserHistory/UserHistory";
 import DoctorsList from "../components/Admin/DoctorList/DoctorList";
 import ListOfAppointment from '../components/Admin/ListOfAppointments/ListOfAppointments'
