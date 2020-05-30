@@ -12,7 +12,7 @@ class Signin extends React.Component {
             email: '',
             password: '',
             authenticated: false,
-            messege : ''
+            message : ''
         };
     }
 
@@ -41,7 +41,7 @@ class Signin extends React.Component {
             else if (this.state.authenticated) {
                 this.props.history.push('/user/UserHistory')
             } else
-                this.setState({messege: 'Incorrect username or password. Please try again!'})
+                this.setState({message: 'Incorrect username or password. Please try again!'})
         }
 
     handelChange = event => {
