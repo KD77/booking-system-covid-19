@@ -37,8 +37,8 @@ exports.sendEmailNotification = functions.firestore
         <p>You have a new booking Time</p>
         <h3>Details</h3>
         <ul>  
-          <li>Time: ${data.subject}</li>
-          <li>subject: ${data.time}</li>
+          <li>Subject: ${data.subject}</li>
+          <li>Time: ${data.time}</li>
           <li>Date: ${data.dat}</li>
           
         </ul>

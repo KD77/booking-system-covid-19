@@ -25,77 +25,72 @@ export default class Slots extends Component {
     this.state = {
       booking: "",
       msg:'',
-      
       string:[],
-      str:"",
-     dat:''
+      dat:''
     };
-    console.log("date",this.state.dat)
   }
 
   handelSubmit = (status, value, key) => {
-    // event.preventDefault();
-    const date = this.props.date;
-     const userId = auth.currentUser.uid;
-    const db = firestore.collection("booking").doc(userId).get().then(doc => {
-      if (doc.exists) {
-          let data = doc.data();
-          this.setState({
-            
-              dat: data.date.toDate().toLocaleString(),
-            
-              
-          });
-
-          this.state.str = this.state.dat;
-          // eslint-disable-next-line react/no-direct-mutation-state
-          let dataa = this.state.dat.split(',')
-          this.setState({
-              dat:dataa[0]
-              
-
-          });
-          
-      } else {
-      }
-  })
-      .catch(error => {
-          console.error(error);
-      });
-
-
-
-
-  
     
-    console.log("hello",db)
-    const subject = this.props.subject;
+  // event.preventDefault();
+  const date = this.props.date;
+  const userId = auth.currentUser.uid;
+ const db = firestore.collection("booking").doc(userId).get().then(doc => {
+   if (doc.exists) {
+       let data = doc.data();
+       this.setState({
+         
+           dat: data.date.toDate().toLocaleString(),
+         
+           
+       });
 
-   
-    const email = auth.currentUser.email;
-    let bookedTime = {};
+       this.state.str = this.state.dat;
+       // eslint-disable-next-line react/no-direct-mutation-state
+       let dataa = this.state.dat.split(',')
+       this.setState({
+           dat:dataa[0]
+           
 
-    if (status) {
-      bookedTime[key] = value;
-    } else {
-      bookedTime[key] = null;
-    }
-   // this.props.history.push("/user")
-  
-    firestore
-      .collection("booking")
-      .doc(userId)
-      .set({
-        date,
-        subject,
-        bookedTime,
-        email,
-        time:Object.keys(bookedTime)[0],
-        dat:this.state.dat
-        
+       });
+       
+   } else {
+   }
+})
+   .catch(error => {
+       console.error(error);
+   });
 
-      });
-   
+ 
+ console.log("hello",db)
+ const subject = this.props.subject;
+
+
+ const email = auth.currentUser.email;
+ let bookedTime = {};
+
+ if (status) {
+   bookedTime[key] = value;
+ } else {
+   bookedTime[key] = null;
+ }
+// this.props.history.push("/user")
+
+ firestore.collection("booking")
+   .doc(userId)
+   .set({
+     date,
+     subject,
+     bookedTime,
+     email,
+     time:Object.keys(bookedTime)[0],
+     dat:this.state.dat
+     
+
+   });
+
+
+      
   };
   renderRedirect = () => {
     if (this.state.redirect) {
