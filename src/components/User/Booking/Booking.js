@@ -16,20 +16,6 @@ class Booking extends React.Component {
     console.log("subject", this.state.subject);
   }
 
-  //const [data,setDate]=useState(new Date());
-
-  /*handelSubmit = (event, childData) => {
-    event.preventDefault();
-    const { date, subject } = this.state;
-    
-
-    firestore.collection("booking").add({
-      date,
-      subject,
-      id:auth.currentUser.uid
-
-    });
-  };*/
   handleChange = event => {
     // const { name, value}=event.target.value;
     this.setState({

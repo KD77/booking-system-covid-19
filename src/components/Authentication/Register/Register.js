@@ -1,6 +1,5 @@
 import React from 'react';
 //import './Register.css';
-
 import {auth,creatUserProfileDocument } from '../../../Database/firebase.utils';
 
 
@@ -121,13 +120,13 @@ class Register extends React.Component {
           </fieldset>
           <div className="mv3">
 
-         
+
             <button className= "b ph4 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib outline-0-m" type="submit">Sign Up</button>
 
           </div>
           <div className="lh-copy mt3">
-            
-        
+
+
           </div>
         </form>
       </main>

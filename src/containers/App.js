@@ -26,9 +26,6 @@ class App extends React.Component {
         this.state={
             currentUser:{}
         };
-
-        console.log('Appp goooooo',this.state.currentUser)
-        
     }
     unsubscribeFromAuth=null;
     componentDidMount(){
