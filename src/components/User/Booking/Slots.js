@@ -45,7 +45,8 @@ export default class Slots extends Component {
            
        });
 
-       this.state.str = this.state.dat;
+       // eslint-disable-next-line react/no-direct-mutation-state
+       this.setState({str: this.state.dat})
        // eslint-disable-next-line react/no-direct-mutation-state
        let dataa = this.state.dat.split(',')
        this.setState({
