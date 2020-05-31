@@ -64,13 +64,14 @@ class UserHistory extends React.Component {
                 .doc(user.uid)
                 .delete()
                 .then(function() {
+                    window.location.reload();
                     console.log("Document successfully deleted!");
                 })
                 .catch(error => {
                     console.error(error);
                 });
         });
-    window.location.reload();
+
     }
 
 
