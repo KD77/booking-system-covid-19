@@ -20,7 +20,7 @@ const LandingPage = () => {
                         </span>
                       </h3>
                       <h4 className="f3 fw1 georgia i">Book Your Appointment Online.</h4>
-                       <div className='tc'>
+                       <div className='fl pa2'>
                         <a className="  f3 grow no-underline br-pill ph3 pv2 mb2 dib white bg-dark-blue " href="covid" title="CovidTest">
                           <strong>COVID-19 Online Test</strong>
                         </a>
