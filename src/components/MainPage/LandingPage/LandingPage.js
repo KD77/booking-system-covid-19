@@ -1,5 +1,7 @@
 import React from 'react';
 import './LandingPage.css';
+import Covid from './corona-virus.png'
+import People from './people-mask.png'
 
 
 
@@ -35,11 +37,11 @@ const LandingPage = () => {
 
           {/*Corona animation container */}
           <div className="animatediv">
-              <img src="https://atheistiran.com/wp-content/uploads/2020/03/corona-virus.png" alt='covid'/>
+              <img src={Covid} alt='covid'/>
           </div>
 
           {/*Image on top of the Main menu container */}
-          <img src="https://atheistiran.com/wp-content/uploads/2020/03/people-mask.png" className="TopImage" alt='people'/>
+          <img src={People} className="TopImage" alt='people'/>
 
           {/*Main Menu Start */}
           <ul className="menu shadow">
