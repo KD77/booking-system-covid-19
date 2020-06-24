@@ -64,7 +64,7 @@ export default class Slots extends Component {
  
  console.log("hello",db)
  const subject = this.props.subject;
-
+//
 
  const email = auth.currentUser.email;
  let bookedTime = {};
