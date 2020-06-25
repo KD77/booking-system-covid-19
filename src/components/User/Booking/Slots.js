@@ -17,7 +17,6 @@ const data = {
         slot7: "13:00am to 13:30am",
         slot8: "14:00am to 14:30am",
 
-
     }
 };
 export default class Slots extends Component {
