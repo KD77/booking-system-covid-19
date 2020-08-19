@@ -12,7 +12,7 @@ class Signin extends React.Component {
             email: '',
             password: '',
             authenticated: false,
-            messege : ''
+            message : ''
         };
     }
 
@@ -41,7 +41,7 @@ class Signin extends React.Component {
             else if (this.state.authenticated) {
                 this.props.history.push('/user/UserHistory')
             } else
-                this.setState({messege: 'Incorrect username or password. Please try again!'})
+                this.setState({message: 'Incorrect username or password. Please try again!'})
         }
 
     handelChange = event => {
@@ -80,7 +80,7 @@ class Signin extends React.Component {
 
                         </fieldset>
                         <div className="">
-                            <h5 style={{color : "red"}}>{this.state.messege}</h5>
+                            <h5 style={{color : "red"}}>{this.state.message}</h5>
 
                             <button className=" b ph3 pv2 input-reset ba b-black bg-transparent grow pointer f6 dib outline-0-m"
                                     type="submit"

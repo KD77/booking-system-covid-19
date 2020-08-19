@@ -3,6 +3,7 @@ import { firestore} from "../../../Database/firebase.utils";
 import {FaUserCircle} from "react-icons/all";
 
 
+
 class ListOfAppointments extends React.Component {
 
     constructor() {
@@ -24,7 +25,8 @@ class ListOfAppointments extends React.Component {
             userLastName:'',
             userPhoneNumber:'',
             userEmail:'',
-            indexId:''
+            indexId:'',
+            message: ""
 
         }
 
@@ -80,6 +82,9 @@ class ListOfAppointments extends React.Component {
             });
     }
 
+
+
+
     cancelAppointment(userId){
         // eslint-disable-next-line no-unused-vars
         const db = firestore
@@ -87,18 +92,26 @@ class ListOfAppointments extends React.Component {
             .doc(userId)
             .delete()
             .then(function() {
-                alert("Document successfully deleted! Please reload the page");
+                window.location.reload();
             })
             .catch(error => {
                 console.error(error);
             });
     }
 
-    renderTableData() {
-        return this.state.bookedList.map((booking,index) => {
+    assignHandler = () => {
+        this.setState({message:'Successfully assigned'})
+    }
 
+
+    renderTableData() {
+
+        return this.state.bookedList.map((booking,index) => {
             const {subject, dateC, bookedTime} = booking //destructuring
+
             return (
+
+
                 <tr className="stripe-dark">
                     <td className="pa3">{subject}</td>
                     <td className="pa3">{dateC[0]}</td>
@@ -126,6 +139,7 @@ class ListOfAppointments extends React.Component {
                                 </option>
                             </select>
                             <button
+                                onClick={this.assignHandler}
                                 className="mv2 pv2 ph3 pointer b br2 hover-bg-dark-green bg-green white bn f7 ttu tracked"
                                 type="submit">Assign
                             </button>
@@ -143,6 +157,7 @@ class ListOfAppointments extends React.Component {
             return(
 
                 <div  className="pa4">
+                    <h4 className='tc'>{this.state.message}</h4>
                     <div className="overflow-auto">
                         <table className="f6 w-100 mw8 center" cellSpacing="0">
                             <thead>
@@ -167,6 +182,7 @@ class ListOfAppointments extends React.Component {
             );
         }else {
             return (
+                <div>
 
                 <article>
                     <main className="br3 ba b--black-10 mv4 w-auto-l w-50-m w-25-l mw6 shadow-5 center">
@@ -203,6 +219,7 @@ class ListOfAppointments extends React.Component {
 
                     </main>
                 </article>
+                </div>
 
             );
         }
